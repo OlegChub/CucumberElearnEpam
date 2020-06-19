@@ -4,7 +4,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.skeleton.Pages.DocsPage;
 import io.cucumber.skeleton.Pages.HomePage;
+import org.assertj.core.api.Assertions;
 import org.junit.Assert;
+
+import static java.lang.String.format;
 
 public class StepDefinitions {
     private HomePage homePage = new HomePage();
@@ -27,7 +30,9 @@ public class StepDefinitions {
 
     @Then("the page with {string} in the title is displayed")
     public void verifyPageTitle(String pageTitle) {
-        Assert.assertTrue(docsPage.pageIsDisplayed(pageTitle));
+        Assertions.assertThat(docsPage.pageIsDisplayed(pageTitle))
+                .overridingErrorMessage("Page with title '%s' is not displayed",pageTitle)
+        .isTrue();
     }
 }
 
