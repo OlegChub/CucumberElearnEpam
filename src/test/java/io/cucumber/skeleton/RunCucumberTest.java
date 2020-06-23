@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin ="pretty",
+        plugin = "pretty",
         monochrome = true,
-        tags = "@docs"
+        tags = ""
 //        glue="src\\test\\java\\io\\cucumber\\skeleton",
 //        features = "src\\test\\resources\\io\\cucumber\\skeleton"
 )

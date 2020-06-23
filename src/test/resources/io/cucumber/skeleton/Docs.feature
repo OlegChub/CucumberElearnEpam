@@ -1,6 +1,6 @@
 Feature: As a user I want to get ability to use Docs page
 
-  @docs
+
   Scenario: User click on a menu item and goes to appropriate page
     Given user enter the site
     When  the user clicks on the "Docs" section
