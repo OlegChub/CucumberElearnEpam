@@ -1,11 +1,14 @@
 Feature: As a user I want to get ability to use Docs page
 
+  @docs
   Scenario: User click on a menu item and goes to appropriate page
     Given user enter the site
     When  the user clicks on the "Docs" section
     And the user clicks on the "Installation" item
-    Then there are 9 menu items in the left-side menu
+    Then there are 11 menu items in the left-side menu
     And left-side menu contains next items
+      | Installation                 |
+      | Guides                       |
       | Professional Services        |
       | Cucumber                     |
       | Gherkin Syntax               |

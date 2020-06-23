@@ -7,7 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin ="pretty",
-        monochrome = true
+        monochrome = true,
+        tags = "@docs"
+//        glue="src\\test\\java\\io\\cucumber\\skeleton",
+//        features = "src\\test\\resources\\io\\cucumber\\skeleton"
 )
 public class RunCucumberTest {
 }
