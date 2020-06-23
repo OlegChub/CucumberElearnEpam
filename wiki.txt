@@ -1,0 +1,2 @@
+Run with testng maven:
+mvn clean install -Dtest=RunCucumberTest
