@@ -6,7 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = "pretty",
+        plugin = {"pretty", "html:target/CucumberReport/report.html",
+                "json:target/CucumberReport/CucumberReport.json",
+                "junit:target/CucumberReport/CucumberReport.xml"},
         monochrome = true,
         tags = ""
 //        glue="src\\test\\java\\io\\cucumber\\skeleton",
